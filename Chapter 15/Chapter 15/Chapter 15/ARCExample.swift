@@ -28,7 +28,9 @@ func testARC() {
     class2ref1 = nil
     print("Setting class2ref2 to nil")
     class2ref2 = nil
-
+    // Suppress Xcode warnings
+    _ = class1ref1
+    _ = class2ref2
 }
 
 
