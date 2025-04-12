@@ -24,7 +24,7 @@ func loadAllContent() async {
     async let userData = retrieveUserData()
     async let imageData = retrieveImageData()
     
-    let results = await(userData, imageData)
+    let results = await (userData, imageData)
     print("User Data:  \(results.0) \nImage Data: \(results.1)")
 }
 

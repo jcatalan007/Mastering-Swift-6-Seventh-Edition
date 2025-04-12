@@ -9,13 +9,14 @@ import Foundation
 
 print("Hello, World!")
 
-
-//await loadContent()
-//await loadAllContent()
-//retrieveDataWithTask()
-//await cancelTask()
-//await testTaskGroup()
-//await testActor()
-testSendable()
+Task {
+    //await loadContent()
+    //await loadAllContent()
+    //retrieveDataWithTask()
+    //await cancelTask()
+    //await testTaskGroup()
+    //await testActor()
+    testSendable()
+}
 
 RunLoop.main.run()
