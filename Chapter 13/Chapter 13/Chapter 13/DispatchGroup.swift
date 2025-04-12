@@ -19,7 +19,7 @@ func testDispatchGroup() async {
     queue.async {
         print("async1 started")
         performCalculation(10_000, tag: "async1")
-        print("aync1 completed")
+        print("async1 completed")
         dispatchGroup.leave()
     }
 
