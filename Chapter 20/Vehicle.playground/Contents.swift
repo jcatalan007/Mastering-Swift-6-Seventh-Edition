@@ -14,8 +14,7 @@ extension  Vehicle  {
         return  hitPoints
     }
     func  isAlive()  ->  Bool  {
-        
-        return  hitPoints  >  0  ?  true  :  false
+        return  hitPoints  >  0
     }
 }
 
@@ -134,26 +133,24 @@ vehicles.append(vh3)
 vehicles.append(vh4)
 
 for  (index,  vehicle)  in  vehicles.enumerated()  {
-    if  let  _  =  vehicle  as?  AirVehicle  {
+    if  vehicle  is AirVehicle  {
         print("Vehicle  at  \(index)  is  Air")
     }
-    if  let  _  =  vehicle  as?  LandVehicle  {
+    if  vehicle  is  LandVehicle  {
         print("Vehicle  at  \(index)  is  Land")
     }
-    if  let  _  =  vehicle  as?  SeaVehicle  {
+    if  vehicle  is  SeaVehicle  {
         print("Vehicle  at  \(index)  is  Sea")
     }
 }
 
-for  (_, vehicle) in vehicles.enumerated() where vehicle is LandVehicle
-{
-    if let vh = vehicle as? LandVehicle {
-        if vh.landAttack {
-            vh.doLandAttack()
-        }
-        if vh.landMovement {
-            vh.doLandMovement()
-        }
+for  vehicle in vehicles where vehicle is LandVehicle {
+    let vh = vehicle as! LandVehicle
+    if vh.landAttack {
+        vh.doLandAttack()
+    }
+    if vh.landMovement {
+        vh.doLandMovement()
     }
 }
 
