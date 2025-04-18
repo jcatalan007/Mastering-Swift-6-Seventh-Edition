@@ -38,8 +38,8 @@ class  Vehicle  {
     func  doAirMovement()  {}
 
     func  takeHit(amount:  Int)  {  hitPoints  -=  amount  }
-    func  hitPointsRemaining()  ->Int  {  return  hitPoints  }
-    func  isAlive()  ->  Bool  {  return  hitPoints  >  0  ?  true  :  false  }
+    func  hitPointsRemaining()  -> Int  {  return  hitPoints  }
+    func  isAlive()  ->  Bool  {  return  hitPoints  >  0  }
 
 }
 
