@@ -15,5 +15,5 @@ var node3 = LinkedListReferenceType("three")
 node1.next = node2
 node2.next = node3
 
-print(node2.next?.value)
+print(node2.next!.value)
                                     
